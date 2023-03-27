@@ -1,0 +1,315 @@
+.header{
+  .header-wrap-d{
+    @include tablet{
+      display: none;
+    }
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-en;
+    font-weight: normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+    .flex-area{
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-top: 5px;
+      .logo{
+        .link-logo{
+          display: block;
+          width: 181px;
+        }
+      }
+      .nav{
+        .nav-list{
+          display: flex;
+          gap: 30px;
+          .nav-item{
+            .link-nav{
+              display: block;
+              position: relative;
+              @include desktop{
+                font-size: 1.40625vw;
+                line-height: 1.44444;
+              }
+              &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 0%;
+                border-bottom: 1px solid #000;
+                transition: .5s;
+                transform-origin: center;
+                left: 50%;
+                transform: translateX(-50%);
+              } 
+              &:hover{
+                &::after{
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget-area{
+      margin-top: 15px;
+      display: flex;
+      gap: 30px;
+      line-height: 1.5;
+     @include desktop{
+      font-size: 1.40625vw;
+      line-height: 1.44444;
+     }
+   
+      .rolling-wrapper{
+        font-weight: bold;
+        height: 70%;
+        overflow: hidden;
+        transition: ease-in-out;
+     
+      }
+      .search-btn{
+        background: url(../images/search.svg)no-repeat;
+        width: 18px;
+        height: 18px;
+        background-size: 100% 100%;
+       
+      }
+      .group-lang{
+        position: relative;
+        z-index: 1;
+       
+          .icon-lang{
+            background: url(../images/lang.svg)no-repeat;
+            width: 18.5px;
+            height: 18.5px;
+            display: block;
+            background-size: 100% 100%;
+            cursor: pointer;
+           
+          }
+          &:hover .lang-list{
+            display: block;
+          }
+          .lang-list{
+            word-break: keep-all;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -.07vw;
+            z-index: -1;
+            text-align: right;
+            font-size: 16px;
+            line-height: 1;
+            &.active{
+              display: block;
+            }
+            .lang-item{
+              text-transform: uppercase;
+              &.mt{
+                margin-top: 16px;
+              }
+              a{
+                &.active{
+                  border-bottom: 2px solid #000;
+                }
+               
+              }
+            }
+           &:hover .lang-list{
+            display: block;
+           }
+          }
+      }
+    }
+
+
+  }
+
+  &.active{
+    &::before{
+
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 150px;
+      content: '';  
+    }
+  }
+
+  
+
+  .header-wrap-m{
+    display: none;
+  
+    @include tablet{
+      display: block;
+      padding: 20px 50px;
+      position: fixed;
+      top: 0;left: 0;
+      background: #fff;
+      z-index: 99;
+      width: 100%;
+    }
+    @include mobile{
+      padding: 4vw 8vw;
+    }
+    .group-flex{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 99;
+   
+    }
+    .logo{
+      .link-logo{
+        width: 22vw;
+        display: block;
+        @include mobile{
+          width: 35vw;
+        }
+      }
+    }
+    .util-area-m{
+      display: flex;
+      gap: 5vw;
+      align-items: center;
+      .search-btn{
+        background: url(../images/search.svg)no-repeat;
+        width: 3vw;
+        height: 3vw;
+        background-size: 100% 100%;
+        @include mobile{
+          width: 3.5vw;
+          height: 3.5vw;
+        }
+      }
+      .btn-area-m{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        .btn-menu{
+          @include mobile{
+            width: 5vw;
+            height: 5vw;
+          }
+          background: url(../images/ham_menu.svg);
+          background-size: 100% 100%;
+          width: 4.2vw;
+          height: 4.2vw;
+          display: block;
+          &.hide{
+            display: none;
+          }
+        }
+        .btn-close{
+          @include mobile{
+            width: 5vw;
+            height: 5vw;
+          }
+          background: url(../images/close_btn.svg);
+          background-size: 100% 100%;
+          width: 4.2vw;
+          height: 4.2vw;
+          display: none;
+          &.show{
+            display: block;
+          }
+        }
+      }
+    }
+    
+   
+    
+    .menu-area-m{
+      overflow-y: auto;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      top: 0;
+      background-color: #fff;
+      padding-top: 20vw;
+      left: 100%;
+      transition: left 0.2s linear;
+      z-index: 10;
+      padding: 100px 50px;
+      @include mobile{
+        padding: 15vw 8%;
+  
+      }
+      &.active{
+        left: 0;
+      }
+      .nav-m{
+        .nav-list-m{
+          .nav-item-m{
+            @include tablet{
+
+            }
+            font-size: 6vw;
+            line-height: 1.4;
+            margin: 8.5vw 0vw;
+          } 
+        }
+      }
+      .rolling-wrapper2{
+        margin-top: 15vw;
+
+        .rolling-list{
+          flex-direction: column;
+          height: 7.5vw;
+        }
+        .rolling-item{
+          font-weight: bold;
+          font-size: 4vw;
+          line-height: 1.38095;
+        }
+      }
+      .group-lang{
+        display: flex;
+        margin-top: 100px;
+        gap: 20px;
+        align-items: center;
+        @include mobile{
+          margin-top: 10vw;
+        }
+        .icon-lang{
+          background: url(../images/lang.svg)no-repeat;
+          width: 4vw;
+          height: 4vw;
+          display: block;
+          background-size: 100% 100%;
+          cursor: pointer;
+        }
+      }
+      .lang-list{
+        display: flex;
+        gap: 20px;
+        padding-top: 5px;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 4vw;
+        line-height: 1.25;
+        .line{
+          height: 25px;
+          background: #000;
+          width: 1px;
+          display: block;
+        }
+      }
+    }
+  }
+
+}

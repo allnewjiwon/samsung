@@ -1,0 +1,500 @@
+.container{
+  padding-top: 50px;
+  @include mobile{
+    padding: 0;
+  }
+  section{
+    @include tablet{
+      margin-top: 100px;
+      padding: 0px 50px;
+    }
+    @include mobile{
+      padding: 8vw;
+      margin-top: 5vw;
+    }
+  }
+  aside{
+    @include tablet{
+      margin-top: 100px;
+    }
+    @include mobile{
+      margin-top: 15vw;
+    }
+  }
+  .sc-daylife{
+    @include tablet{
+      margin-top: 80px;
+    }
+    @include mobile{
+      margin-top: 15vw;
+    }
+    margin-top: 90px;
+    .headline-area{
+      .headline{
+        font-size: 48px;
+        font-weight: bold;
+        border: none;
+        @include tablet{
+          font-size: 3.75vw;
+          line-height: 1.33333;
+          padding: 0;
+        }
+        @include mobile{
+          font-size: 7vw;
+        }
+      }
+      .sub-headline{
+        font-family: $font-kr;
+        font-size: 24px;
+        margin: 12px 0 40px 0;
+        display: block;
+        @include tablet{
+          font-size: 1.875vw;
+          line-height: 1.58333;
+          margin-top: 0;
+        }
+        @include mobile{
+          font-size: 3.5vw;
+          margin-bottom: 8vw;
+        }
+      }
+    }
+    .main-visual{
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      video{
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include mobile{
+        padding-bottom: 130%;
+      }
+    }
+    .txt-area{
+      margin-top: 35px;
+      margin-left: 50%;
+      @include mobile{
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 5vw;
+       
+      }
+      .desc{
+        @include mobile{
+          display: block;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+}
+
+// SC-LATEST
+
+.sc-latest{
+ 
+  .group-flex{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 42px;
+    @include tablet{
+      align-items: flex-start;
+    }
+    @include mobile{
+      flex-direction: column;
+      width: 100%;
+    }
+    .fix-area{
+      width: 50%;
+      padding-right: 30px;
+      position: sticky;
+      bottom: 30px;
+      @include tablet{
+        bottom: auto;
+        top: 0;
+        padding-right: 1.05vw;
+      }
+      @include mobile{
+        width: 100%;
+        position: relative;
+        
+      }
+      .thumb-box{
+        overflow: hidden;
+        img{
+          // transition: .5s;
+        }
+      }
+      .link-move{
+        width: 100%;
+        display: block;
+        @include mobile{
+          padding-top: 47vw;
+          position: relative;
+          overflow: hidden;
+        }
+        img{
+          width: 100%;
+          @include mobile{
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+        
+      }
+      .txt-box{
+        margin-top: 37px;
+        @include mobile{
+          margin-top: 5vw;
+        }
+        .desc{
+          margin-top: 20px;
+        }
+      }
+    }
+    .scroll-area{
+      width: 50%;
+      @include tablet{
+        padding-left: 1.05vw;
+      }
+      @include mobile{
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10vw;
+      }
+      .scroll-list{
+        .scroll-item{
+          padding: 50px 0;
+          &:first-child{
+            padding-top: 0;
+          }
+          @include tablet{
+           padding: 0;
+           &:not(:first-child){
+            margin-top: 3.9vw;
+            padding-top: 3.9vw;
+           }
+          }
+          &:not(:first-child){
+            border-top: 1px solid #707070;
+          }
+          @include mobile{
+            padding: 0;
+            &:not(:first-child){
+              border: none;
+            }
+            &:not(:first-child){
+              margin-top: 10vw;
+              padding: 0;
+            }
+       
+          }
+          .group-link{
+            display: flex;
+            @include mobile{
+              flex-direction: column;
+              justify-content: flex-end;
+            }
+            .thumb-box{
+              position: relative;
+              overflow: hidden;
+              padding-top: 28%;
+              width: 50%;
+              @include mobile{
+                padding-top: 47vw;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+              }
+              img{
+                object-fit: cover;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                // transition: .5s;
+              }
+            }
+            .txt-box{
+              @include tablet{
+                padding-left: 20px;
+              }
+              @include mobile{
+                padding: 0;
+                width: 100%;
+                margin-top: 5vw;
+              }
+             width: 50%;
+             padding-left: 40px;
+             margin-top: 0;
+              .sub-tit{
+                margin-top: 6px;
+              }
+            }
+          }
+          .info-box{
+            margin-top: 35px;
+            
+          }
+          @include tablet{
+            .info-box{
+              margin-top: 2.7vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.banner1{
+  margin-top: 185px;
+  
+  .img-box{
+    .link-banner{
+      display: block;
+      @include mobile{
+        position: relative;
+        overflow: hidden;
+        height: auto;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 30% 30%;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        @include mobile{
+          object-fit: cover;
+          position: absolute;
+          top: 0;left: 0;
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+}
+// SC-MORE-STORY
+.sc-more-story{
+  margin-top: 150px;
+  position: relative;
+  @include tablet{
+    margin-bottom: 200px;
+  }
+  @include mobile{
+    padding: 18vw 0 0 8vw !important;
+  }
+  .group-contents{
+    @include mobile{
+      overflow: hidden;
+      .contents-list{
+        flex-wrap: nowrap;
+        // gap: none;
+      }  
+      .contents-item{
+        width: 70%;
+        .thumb-box{
+          overflow: hidden;
+          position: relative;
+          padding-top: 150%;
+          img{
+            position: absolute;
+            object-fit: cover;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+   
+          }
+        }
+      }
+    }
+
+  }
+}
+// SC-SORT
+.sc-sort{
+  margin-top: 250px;
+  background: #f6f6f6;
+  padding-top: 80px;
+  .headline{
+    @include tablet{
+      padding-top: 50px;
+    }
+  }
+  .accordion-list{
+    .accordion-item{
+      padding: 75px 0;
+      cursor: pointer;
+      border-bottom: 1px solid #000;
+  
+      &.effect-motion{
+        .desc{
+          &.effect{
+            animation: txtMotion .5s linear forwards;
+          }
+        }
+  
+        .effect{
+          .contents-item{
+            img{
+              animation: imgBgMotion 1s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+            }
+            &:nth-child(1){
+              img{
+                animation-delay: .1s;
+              }
+            }
+            &:nth-child(2){
+              img{
+                animation-delay: .2s;
+              }
+            }
+            &:nth-child(3){
+              img{
+                animation-delay: .3s;
+              }
+            }
+            &:nth-child(4){
+              img{
+                animation-delay: .4s;
+              }
+            }
+            &:nth-child(5){
+              img{
+                animation-delay: .5s;
+              }
+            }
+          }
+        }
+      }
+
+      @include tablet{
+        padding: 40px 0;
+      }
+      .group-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title{
+          font-size: 48px;
+          @include tablet{
+            font-size: 3.75vw;
+            line-height: 1.33333;
+          }
+          @include mobile{
+            font-size: 5.5vw;
+          }
+        }
+        span{
+          @include mobile{
+            width: 10vw;
+            margin-right: 0;
+          }
+          margin-right: 20px;
+          transition: .2s;
+          &.active{
+            transform: rotate(-180deg);
+          }
+        }
+      }
+      .group-contents{
+        max-height: 0px;
+        transition: max-height 0.2s;
+        overflow: hidden;
+        &.on{
+          max-height: 4000px;
+        }
+        @include mobile{
+          .desc{display: block; width: 100%;}
+          .contents-list{
+            flex-direction: column;
+            .contents-item{
+              width: 100%;
+            }
+          }
+        }
+        .thumb-box{
+          padding-top: 55.92105%;
+          position: relative;
+          overflow: hidden;
+          &.ani{
+            img{
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// BANNER2
+.banner2{
+  margin-top: 250px;
+  .link-banner{
+    .banner2_m{
+        display: none;
+    }
+  }
+
+  @include mobile{
+    .img-box{
+      position: relative;
+      padding-top: 135%;
+      .banner2_p{display: none;}
+      .banner2_m{display: block;}
+      img{
+        position: absolute;
+        object-fit: cover;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+// SC-NEWS
+.sc-news{
+  @include tablet{
+    margin-bottom: 200px;
+  }
+  @include mobile{
+    padding: 8vw 0 0 8vw !important;
+    .group-contents{
+      overflow: hidden;
+      .contents-list{
+        margin-top: 42px;
+        flex-wrap: nowrap;
+        .contents-item{
+          width: 70%;
+        }
+      }
+    }
+  }
+  margin-top: 170px;  
+  position: relative;
+  .group-contents{
+    .sub-tit{
+      margin-top: 12px;
+    }
+  }
+}

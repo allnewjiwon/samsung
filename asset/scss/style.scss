@@ -1,0 +1,14 @@
+
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './base/common';
+@import './base/reset';
+@import './base/typhograpy';
+
+@import './component/small_layout'; 
+@import './layout/footer';
+@import './layout/header';
+
+@import './main/main';
+

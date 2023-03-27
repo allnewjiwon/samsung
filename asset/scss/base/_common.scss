@@ -1,0 +1,98 @@
+.blind{
+  position: absolute;
+  width: 1px;height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+strong{
+  font-weight: bold;
+}
+.hidden{
+  overflow: hidden;
+}
+.headline{
+  font-weight: normal;
+  font-size: 36px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  @include tablet{
+    font-size: 2.8125vw;
+    line-height: 1.5;
+  }
+  @include mobile{
+    font-size: 6vw;
+  }
+}
+
+
+section{
+  padding: 50px;
+  margin: 0 auto;
+}
+
+
+.source-info{
+  font-size: 12px;
+  font-family: $font-kr;
+  margin-top: 14px;
+  display: block;
+  @include mobile{
+    font-size: 1.8vw;
+    margin-top: 2vw;
+  }
+}
+
+.desc{
+  line-height: 1.8;
+  font-family: $font-kr;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-weight: normal;
+  @include tablet{
+    font-size: 2vw;
+    line-height: 1.77778;
+  }
+  @include mobile{
+    display: none;
+    font-size: 3vw;
+  }
+
+}
+
+.title{
+  font-weight: bold;
+  font-size: 30px;
+  
+    @include tablet{
+      font-size: 2.34375vw;
+      line-height: 1.33333;
+    }
+    @include mobile{
+      font-size: 5.5vw;
+      
+    }
+  
+    
+}
+.sub-tit{
+  display: block;
+  line-height: 1.8;
+  font-family: $font-kr;
+  margin-top: 2px;
+  @include tablet{
+    font-size: 2vw;
+    line-height: 1.77778;
+  }
+  @include mobile{
+    font-size: 3vw;
+  }
+}
+
+.txt-box{
+  margin-top: 37px;
+
+}
