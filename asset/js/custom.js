@@ -305,6 +305,32 @@ $(function(){
       }
       
     })
+    // 8. view-more area action
+    $('.view-more-area').each(function(i,el){
+      parentEl = $(this).parents();
+      lineEl = $(this).find('.line');
+      txtEl = $(this).find('.txt');
+
+      const viewAction = gsap.timeline({
+        scrollTrigger : {
+          trigger: parentEl,
+          start: "40% 0%",
+          end: "100% 0%",
+          markers : true,
+        }
+      })
+      viewAction 
+      .addLabel('a')
+      .to(lineEl,{
+        height:"30px",
+        duration: .5,
+        ease:Power2.easeIn
+      },'a')
+      .to(txtEl,{
+        opacity:1, 
+        duration: 1,
+      },'a+=.5')
+    })
       
   }) 
 

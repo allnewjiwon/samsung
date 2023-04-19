@@ -11,15 +11,17 @@
   }
   .link-more{
     display: inline-block;
-    // text-align: center;
-   
+
+    .txt{
+      opacity: 0;
+    }
     .line{
       display: block;
       width: 1px;
-      height: 30px;
       margin: 0 auto;
       background-color: #000;
       margin-bottom: 8px;
+      
     }
   
   }

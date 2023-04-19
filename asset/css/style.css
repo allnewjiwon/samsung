@@ -223,10 +223,12 @@ body {
 .view-more-area .link-more {
   display: inline-block;
 }
+.view-more-area .link-more .txt {
+  opacity: 0;
+}
 .view-more-area .link-more .line {
   display: block;
   width: 1px;
-  height: 30px;
   margin: 0 auto;
   background-color: #000;
   margin-bottom: 8px;
