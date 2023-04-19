@@ -316,7 +316,7 @@ $(function(){
           trigger: parentEl,
           start: "40% 0%",
           end: "100% 0%",
-          markers : true,
+          // markers : true,
         }
       })
       viewAction 
