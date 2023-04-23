@@ -40,6 +40,9 @@
     flex-wrap: wrap;
     margin-top: 42px;
     gap: 30px;
+    @include mobile{
+      gap: 0;
+    }
     .contents-item{
       width: calc((100% - 60px) / 3);
       

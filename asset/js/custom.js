@@ -43,7 +43,8 @@ $(function(){
     function initSwiper() {
       if (ww < 768 && storySwiper == undefined) {
         storySwiper = new Swiper(".sc-more-story .m-story", {
-          slidesPerView: 1.5, 
+          slidesPerView: 'auto', 
+          spaceBetween: 30,
         });
       
       } else if (ww >= 768 && storySwiper!= undefined) {
@@ -53,7 +54,8 @@ $(function(){
 
       if (ww < 768 && newsSwiper == undefined) {
         newsSwiper = new Swiper(".sc-news .m-news", {
-          slidesPerView: 1.5, 
+          slidesPerView: 'auto',
+          spaceBetween: 30, 
         });
       
       } else if (ww >= 768 && newsSwiper!= undefined) {
